@@ -1,0 +1,125 @@
+version: 2
+
+models:
+  - name: int_order_products
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: add_to_cart_order
+        tests:
+          - not_null
+
+      - name: reordered
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+                quote: false
+
+      - name: order_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['prior', 'train']
+
+  - name: int_order_details
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: order_number
+        tests:
+          - not_null
+
+      - name: order_dow
+        tests:
+          - not_null
+
+      - name: order_hour_of_day
+        tests:
+          - not_null
+
+      - name: add_to_cart_order
+        tests:
+          - not_null
+
+      - name: reordered
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+                quote: false
+
+      - name: order_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['prior', 'train']
+
+  - name: int_order_product_details
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: product_name
+        tests:
+          - not_null
+
+      - name: aisle_id
+        tests:
+          - not_null
+
+      - name: aisle
+        tests:
+          - not_null
+
+      - name: department_id
+        tests:
+          - not_null
+
+      - name: department
+        tests:
+          - not_null
+
+      - name: reordered
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+                quote: false
+
+      - name: order_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['prior', 'train']
