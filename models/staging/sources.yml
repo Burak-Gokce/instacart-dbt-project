@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: instacart_raw
+    database: instacartproject-508010
+    schema: dataset_instacart
+
+    tables:
+      - name: aisles
+      - name: departments
+      - name: order_products__prior
+      - name: order_products__train
+      - name: orders
+      - name: products
