@@ -1,0 +1,102 @@
+version: 2
+
+models:
+  - name: mart_product_performance
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        tests:
+          - not_null
+
+      - name: aisle
+        tests:
+          - not_null
+
+      - name: department
+        tests:
+          - not_null
+
+      - name: total_purchases
+        tests:
+          - not_null
+
+      - name: unique_customers
+        tests:
+          - not_null
+
+      - name: total_reorders
+        tests:
+          - not_null
+
+      - name: reorder_rate
+        tests:
+          - not_null
+
+      - name: avg_add_to_cart_order
+        tests:
+          - not_null
+
+  - name: mart_customer_behavior
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        tests:
+          - not_null
+
+      - name: total_products_purchased
+        tests:
+          - not_null
+
+      - name: unique_products_purchased
+        tests:
+          - not_null
+
+      - name: total_reorders
+        tests:
+          - not_null
+
+      - name: reorder_rate
+        tests:
+          - not_null
+
+      - name: avg_days_between_orders
+        tests:
+          - not_null
+
+  - name: mart_order_time_analysis
+    columns:
+      - name: order_dow
+        tests:
+          - not_null
+
+      - name: order_hour_of_day
+        tests:
+          - not_null
+
+      - name: total_orders
+        tests:
+          - not_null
+
+      - name: total_products_purchased
+        tests:
+          - not_null
+
+      - name: unique_customers
+        tests:
+          - not_null
+
+      - name: avg_basket_position
+        tests:
+          - not_null
+
+      - name: reorder_rate
+        tests:
+          - not_null
